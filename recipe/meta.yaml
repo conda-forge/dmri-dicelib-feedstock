@@ -27,10 +27,13 @@ requirements:
     - pip
     - python
   run:
-    - dipy
+    - cython
     - h5py >=3
+    - nibabel
     - {{ pin_compatible('numpy') }}
+    - psutil
     - python
+    - pywin32  # [win]
     - scipy
 
 test:
