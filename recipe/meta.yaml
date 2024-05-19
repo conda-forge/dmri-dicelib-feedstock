@@ -10,12 +10,13 @@ source:
   sha256: ff34b5330888d25ac430764d1801ee00ebe2a72b52b2a814e052112790bfdbac
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
@@ -30,7 +31,6 @@ requirements:
     - cython
     - h5py >=3
     - nibabel
-    - {{ pin_compatible('numpy') }}
     - psutil
     - python
     - pywin32  # [win]
