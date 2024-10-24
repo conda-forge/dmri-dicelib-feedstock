@@ -10,7 +10,7 @@ source:
   sha256: b54fb6c9a19faa8a6e306659fa0d892cd6d70c077714fa581c9701c5693afc9d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -27,6 +27,7 @@ requirements:
     - numpy
     - pip
     - python
+    - setuptools
   run:
     - cython
     - h5py >=3
