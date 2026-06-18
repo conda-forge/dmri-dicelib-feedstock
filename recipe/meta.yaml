@@ -1,5 +1,5 @@
 {% set name = "dmri-dicelib" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c3a236877b5dfdde1d1d7b5f6037006ad6e5054b2c120e13c1f5d4e052f6625c
+  sha256: 8c458870d0367c193af83cca69eef029710d4c1e686ec6930c760c6c076f4cb2
 
 build:
   number: 0
